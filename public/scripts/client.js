@@ -14,8 +14,8 @@ $(document).ready(function() {
       const rightOperand = $('#rightOperand').val()
       const operator = $("input[name='operator']:checked").val()
 
-      // const expression = leftOperand + operator + rightOperand
-      const expression = "3+3"
+      const expression = leftOperand + operator + rightOperand
+      //const expression = "3+3"
       const result = "6"
       $('#expression').text(`Expression: ${expression}`);
       $('#result').text(`Result: ${result}`);
