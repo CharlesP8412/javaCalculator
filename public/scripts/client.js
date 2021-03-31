@@ -7,7 +7,6 @@ $(document).ready(function() {
   }
 
   const clickSubmit = function() {
-
     $('form button').on('click', event => {
       event.preventDefault();
       clearOldResults();
@@ -26,12 +25,11 @@ $(document).ready(function() {
         url: `http://localhost:8080/leftOperand=${leftOperand}rightOperand=${rightOperand}operation=${operator}`,
       })
         .then(res => {
-          console.log("THEN...")
-          // const expression = res.data.Expression;
-          // const result = res.data.Result;
-          // $('#expression').text(`Expression: ${expression}`);
-          // $('#result').text(`Result: ${result}`)
-
+          //Display results from Server
+          const expression = res.data.Expression;
+          const result = res.data.Result;
+          $('#expression').text(`Expression: ${expression}`);
+          $('#result').text(`Result: ${result}`)
         })
         .catch(e => console.log("ERROR:", e));
     })
