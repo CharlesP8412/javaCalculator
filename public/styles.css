@@ -1,0 +1,16 @@
+
+section{
+  background-color: lightgrey;
+}
+.inputs {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+  height:fit-content;
+}
+.inputBox{
+  width: 75%;
+}
+.operations{
+  width: 80%;
+}

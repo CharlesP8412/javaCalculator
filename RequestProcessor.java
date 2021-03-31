@@ -47,8 +47,8 @@ class RequestProcessor implements Runnable{
     }
     System.out.println(result);
     // jsonObject={
-    //   "expression": leftOperand + operator + rightOperand,
-    //   "result": result
+    //   "Expression": leftOperand + operator + rightOperand,
+    //   "Result": result
     // };
     //End your Code
     String response = msgToClient + jsonObject.toString();

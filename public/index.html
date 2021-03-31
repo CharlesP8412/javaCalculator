@@ -13,35 +13,44 @@
     <script type="text/javascript" src="./scripts/client.js"></script>
     <script type="text/javascript" src="./scripts/helpers.js"></script>
 
+    <link rel="stylesheet" href="styles.css" />
+
     <title>Java Calculator</title>
   </head>
   <body>
-    <form class="inputArea" action="/" method="POST">
-      <div>
-        <h5>Left Operand</h5>
-        <input type="number" id="leftOperand" />
+    <section>
+      <form class="inputArea" action="/" method="POST">
+        <div class="inputs">
+          <div>
+            <h5>Left Operand</h5>
+            <input class="inputBox" type="number" id="leftOperand" />
+          </div>
+          <div class="operations">
+            <input type="radio" id="add" name="operator" value="+" />
+            <label for="add">+ Addition</label><br />
+            <input type="radio" id="subtract" name="operator" value="-" />
+            <label for="subtract">- Subtraction</label><br />
+            <input type="radio" id="multiply" name="operator" value="*" />
+            <label for="multiply">* Multiplication</label>
+            <br />
+            <input type="radio" id="division" name="operator" value="/" />
+            <label for="division">/ Division</label>
+            <br />
+            <input type="radio" id="remainder" name="operator" value="%" />
+            <label for="remainder">% Remainder</label>
+          </div>
+          <div>
+            <h5>Right Operand</h5>
+            <input class="inputBox" type="number" id="rightOperand" />
+          </div>
+        </div>
+        <button type="submit">Calculate</button>
+      </form>
+      <div class="solutionArea">
+        <h5 id="expression">Expression:</h5>
+
+        <h5 id="result">Result:</h5>
       </div>
-      <div>
-        <input type="radio" id="add" name="operator" value="+" />
-        <label for="add">+ Addition</label><br />
-        <input type="radio" id="subtract" name="operator" value="-" />
-        <label for="subtract">- Subtraction</label><br />
-        <input type="radio" id="multiply" name="operator" value="*" />
-        <label for="multiply">* Multiplication</label>
-        <input type="radio" id="division" name="operator" value="/" />
-        <label for="division">/ Division</label>
-        <input type="radio" id="remainder" name="operator" value="%" />
-        <label for="remainder">% Remainder</label>
-      </div>
-      <div>
-        <h5>Right Operand</h5>
-        <input type="number" id="rightOperand" />
-      </div>
-      <button type="submit">Calculate</button>
-    </form>
-    <div class="solutionArea">
-      <h5>Expression:</h5>
-      <h5>Result:</h5>
-    </div>
+    </section>
   </body>
 </html>
