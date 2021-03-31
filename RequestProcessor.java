@@ -2,7 +2,7 @@
 import java.io.*;
 import java.net.Socket;
 
-import org.json.JSONObject;
+// import org.json.JSONObject;
 
 class RequestProcessor implements Runnable{
   private Socket socket = null;
@@ -12,7 +12,7 @@ class RequestProcessor implements Runnable{
   private String msgToClient = "HTTP/1.1 200 OK\n"  
   + "Server: HTTP server/0.1\n" 
   + "Access-Control-Allow-Origin: *\n\n";
-  private JSONObject jsonObject = new JSONObject();
+  // private JSONObject jsonObject = new JSONObject();
   
   public RequestProcessor(Socket Socket){
     super();
@@ -27,37 +27,29 @@ class RequestProcessor implements Runnable{
 
   public void run() {
     //Your Code here
-    //Rx JSON from html
-    /* 
+    System.out.println("RUN CLASS");
+    int leftOperand = 2;
+    int rightOperand =3;
+    String operator = "+";
+    int result = 0;
+    switch(operator)
     {
-      leftOperand: x
-      rightOperand: y
-      operation: *
+       case "+":
+       result = leftOperand + rightOperand;
+       case "-":
+       result = leftOperand - rightOperand;
+       case "*":
+       result = leftOperand * rightOperand;
+       case "/":
+       result = leftOperand / rightOperand;
+       case "%":
+       result = leftOperand % rightOperand;
     }
-    */
-    //Parse JSON into a function that will return the result  (Expressoin will be )
-    /* 
-    function (num1, num2, operation){
-      //May need to convert nums to Numbers
-      switch(operation){
-        case '+':
-        num1 + num2
-        break;
-        case '-':
-        num1 - num2
-        break;
-        case '*':
-        num1 * num2
-        break;
-        case '/':
-        num1 / num2
-        break;
-        case '%':
-        num1 % num2
-        break;
-      }
-    }
- */
+    System.out.println(result);
+    // jsonObject={
+    //   "expression": leftOperand + operator + rightOperand,
+    //   "result": result
+    // };
     //End your Code
     String response = msgToClient + jsonObject.toString();
     os.write(response.getBytes());
