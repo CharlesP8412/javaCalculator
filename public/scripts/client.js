@@ -26,10 +26,10 @@ $(document).ready(function() {
       })
         .then(res => {
           //Display results from Server
-          const expression = res.data.Expression;
-          const result = res.data.Result;
-          $('#expression').text(`Expression: ${expression}`);
-          $('#result').text(`Result: ${result}`)
+          //const expression = res.data.Expression;
+          //const result = res.data.Result;
+          //$('#expression').text(`Expression: ${expression}`);
+          //$('#result').text(`Result: ${result}`)
         })
         .catch(e => console.log("ERROR:", e));
     })
