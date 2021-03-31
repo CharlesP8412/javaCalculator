@@ -14,3 +14,11 @@ section{
 .operations{
   width: 80%;
 }
+
+.response{
+ display: flex;
+ flex-direction: row;
+}
+.response>h5{
+  padding-right: 1rem;
+}
